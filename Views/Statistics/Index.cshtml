@@ -1,0 +1,33 @@
+@model IEnumerable<BeFitApp.Controllers.ExerciseStatViewModel>
+@{ ViewData["Title"] = "Analysis"; }
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary"><i class="bi bi-graph-up-arrow"></i> Progress (Last 4 Weeks)</h2>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="ps-4">Exercise</th>
+                        <th>Sessions</th>
+                        <th>Total Reps</th>
+                        <th>Max Weight</th>
+                        <th>Avg Weight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td class="ps-4 fw-bold text-primary">@item.Name</td>
+                            <td>@item.Count</td>
+                            <td>@item.TotalRepetitions</td>
+                            <td>@item.MaxWeight kg</td>
+                            <td>@item.AvgWeight.ToString("0.0") kg</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

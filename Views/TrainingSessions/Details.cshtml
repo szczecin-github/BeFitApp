@@ -1,0 +1,88 @@
+@model BeFitApp.Models.TrainingSession
+@{ ViewData["Title"] = Localizer["Session Details"]; }
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold mb-0">@Model.Name</h2>
+            <p class="text-muted">
+                <i class="bi bi-clock"></i> @Model.StartDateTime.ToString("f") 
+                <span class="mx-2">|</span> 
+                @Localizer["Duration"]: @((Model.EndDateTime - Model.StartDateTime).TotalMinutes) min
+            </p>
+        </div>
+        <a asp-action="Index" class="btn btn-outline-secondary">@Localizer["Back to List"]</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-light text-dark fw-bold border-bottom">
+                    @Localizer["Exercises Completed"]
+                </div>
+                <div class="card-body p-0">
+                    @if(Model.Exercises.Count == 0) { 
+                        <div class="p-4 text-center text-muted">@Localizer["No exercises added yet."]</div> 
+                    }
+                    else {
+                        <table class="table table-hover mb-0">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="ps-4">@Localizer["Exercise"]</th>
+                                    <th>@Localizer["Weight"]</th>
+                                    <th>@Localizer["Sets"]</th>
+                                    <th>@Localizer["Reps"]</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(var ex in Model.Exercises) {
+                                    <tr>
+                                        <td class="ps-4 fw-bold text-primary">@ex.ExerciseType?.Name</td>
+                                        <td>@ex.Weight kg</td>
+                                        <td>@ex.Sets</td>
+                                        <td>@ex.Repetitions</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                    <i class="bi bi-plus-circle"></i> @Localizer["Add Exercise"]
+                </div>
+                <div class="card-body">
+                    <form asp-action="AddExercise" method="post">
+                        <input type="hidden" name="TrainingSessionId" value="@Model.Id" />
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">@Localizer["Exercise Type"]</label>
+                            <select name="ExerciseTypeId" class="form-select" asp-items="ViewBag.ExerciseTypeId"></select>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <label class="form-label small text-muted">@Localizer["Weight"] (kg)</label>
+                                <input type="number" name="Weight" class="form-control" value="0" step="0.5" />
+                            </div>
+                            <div class="col-3">
+                                <label class="form-label small text-muted">@Localizer["Sets"]</label>
+                                <input type="number" name="Sets" class="form-control" value="3" />
+                            </div>
+                            <div class="col-3">
+                                <label class="form-label small text-muted">@Localizer["Reps"]</label>
+                                <input type="number" name="Repetitions" class="form-control" value="10" />
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">@Localizer["Add Entry"]</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+@model IEnumerable<BeFitApp.Models.ExerciseRequest>
+@{ ViewData["Title"] = "Manage Requests"; }
+
+<h2>Pending Exercise Requests</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Requested Name</th>
+            <th>Reason</th>
+            <th>User</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Reason</td>
+            <td>@item.RequestedBy?.UserName</td>
+            <td>
+                <form asp-action="ApproveRequest" asp-route-id="@item.Id" method="post">
+                    <button type="submit" class="btn btn-success btn-sm">Approve & Add</button>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

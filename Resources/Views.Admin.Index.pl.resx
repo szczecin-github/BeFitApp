@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="User Management" xml:space="preserve"><value>Zarządzanie Użytkownikami</value></data>
+  <data name="Username / Email" xml:space="preserve"><value>Nazwa / Email</value></data>
+  <data name="User ID" xml:space="preserve"><value>ID Użytkownika</value></data>
+  <data name="Actions" xml:space="preserve"><value>Akcje</value></data>
+  <data name="You" xml:space="preserve"><value>Ty</value></data>
+  <data name="Reset Password" xml:space="preserve"><value>Resetuj Hasło</value></data>
+</root>

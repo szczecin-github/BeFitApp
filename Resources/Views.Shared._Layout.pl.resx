@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Workouts" xml:space="preserve"><value>Treningi</value></data>
+  <data name="Nutrition" xml:space="preserve"><value>Odżywianie</value></data>
+  <data name="Analysis" xml:space="preserve"><value>Analiza</value></data>
+  <data name="Admin Tools" xml:space="preserve"><value>Narzędzia Admina</value></data>
+  <data name="Request Feature" xml:space="preserve"><value>Zgłoś Funkcję</value></data>
+  <data name="Change Language" xml:space="preserve"><value>Zmień Język</value></data>
+</root>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Nutrition Log" xml:space="preserve"><value>Dziennik Żywieniowy</value></data>
+  <data name="Log Meal" xml:space="preserve"><value>Dodaj Posiłek</value></data>
+  <data name="Date" xml:space="preserve"><value>Data</value></data>
+  <data name="Food" xml:space="preserve"><value>Produkt</value></data>
+  <data name="Calories" xml:space="preserve"><value>Kalorie</value></data>
+  <data name="Carbs" xml:space="preserve"><value>Węglowodany</value></data>
+  <data name="Fats" xml:space="preserve"><value>Tłuszcze</value></data>
+  <data name="Sugar" xml:space="preserve"><value>Cukry</value></data>
+</root>

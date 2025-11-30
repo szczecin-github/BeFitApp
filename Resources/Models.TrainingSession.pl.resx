@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Session Name" xml:space="preserve">
+    <value>Nazwa Sesji</value>
+  </data>
+  <data name="Start Time" xml:space="preserve">
+    <value>Czas Rozpoczęcia</value>
+  </data>
+  <data name="End Time" xml:space="preserve">
+    <value>Czas Zakończenia</value>
+  </data>
+  <data name="Name is required" xml:space="preserve">
+    <value>Nazwa jest wymagana</value>
+  </data>
+</root>

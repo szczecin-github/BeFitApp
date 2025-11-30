@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Session Details" xml:space="preserve"><value>Szczegóły Sesji</value></data>
+  <data name="Duration" xml:space="preserve"><value>Czas trwania</value></data>
+  <data name="Back to List" xml:space="preserve"><value>Powrót do listy</value></data>
+  <data name="Exercises Completed" xml:space="preserve"><value>Ukończone Ćwiczenia</value></data>
+  <data name="No exercises added yet." xml:space="preserve"><value>Brak dodanych ćwiczeń.</value></data>
+  <data name="Exercise" xml:space="preserve"><value>Ćwiczenie</value></data>
+  <data name="Weight" xml:space="preserve"><value>Ciężar</value></data>
+  <data name="Sets" xml:space="preserve"><value>Serie</value></data>
+  <data name="Reps" xml:space="preserve"><value>Powt.</value></data>
+  <data name="Add Exercise" xml:space="preserve"><value>Dodaj Ćwiczenie</value></data>
+  <data name="Exercise Type" xml:space="preserve"><value>Rodzaj Ćwiczenia</value></data>
+  <data name="Add Entry" xml:space="preserve"><value>Dodaj Wpis</value></data>
+</root>

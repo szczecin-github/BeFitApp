@@ -1,0 +1,40 @@
+@model BeFitApp.Models.FoodEntry
+@{ ViewData["Title"] = "Log Meal"; }
+
+<h1>Log Meal</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label">Food Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Calories" class="control-label"></label>
+                <input asp-for="Calories" class="form-control" />
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label asp-for="Carbs"></label>
+                    <input asp-for="Carbs" class="form-control" />
+                </div>
+                <div class="col-4">
+                    <label asp-for="Fats"></label>
+                    <input asp-for="Fats" class="form-control" />
+                </div>
+                <div class="col-4">
+                    <label asp-for="Sugar"></label>
+                    <input asp-for="Sugar" class="form-control" />
+                </div>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary">Save Entry</button>
+        </form>
+    </div>
+</div>

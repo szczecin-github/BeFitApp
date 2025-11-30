@@ -1,0 +1,39 @@
+@model IEnumerable<BeFitApp.Models.TrainingSession>
+@{ ViewData["Title"] = "My Workouts"; }
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary fw-bold">My Workouts</h2>
+    <a asp-action="Create" class="btn btn-primary shadow-sm">
+        <i class="bi bi-plus-lg"></i> Start New Session
+    </a>
+</div>
+
+<div class="row">
+    @foreach (var item in Model) {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>
+                        <i class="bi bi-calendar-event"></i> @item.StartDateTime.ToString("MMM dd")
+                    </span>
+                    <small class="text-white-50">
+                        @item.StartDateTime.ToString("HH:mm") - @item.EndDateTime.ToString("HH:mm")
+                    </small>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title fw-bold text-dark">@item.Name</h5>
+                    <p class="card-text text-muted">
+                        <i class="bi bi-dumbbell"></i> @item.Exercises.Count Exercises completed
+                    </p>
+                </div>
+                <div class="card-footer bg-white border-top-0 d-flex justify-content-between">
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">Details</a>
+                    <div>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning"><i class="bi bi-pencil"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

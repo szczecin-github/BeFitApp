@@ -1,0 +1,122 @@
+/* --- COLOR VARIABLES --- */
+:root {
+    --bg-color: #E0F7FA;          /* Your SnowCyan */
+    --primary-blue: #007bb5;      /* Professional Deep Blue */
+    --accent-blue: #4fc3f7;       /* Lighter Sky Blue */
+    --text-dark: #2c3e50;
+    --card-bg: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    /* Subtle grid pattern */
+    background-image: radial-gradient(#b2ebf2 1px, transparent 1px);
+    background-size: 20px 20px; 
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background: white !important; /* Force white background */
+    border-bottom: 2px solid var(--accent-blue);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-brand {
+    color: var(--primary-blue) !important;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #546e7a !important;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--primary-blue) !important;
+}
+
+/* --- MAIN LAYOUT --- */
+.main-wrapper {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    min-height: 80vh;
+}
+
+/* --- CARDS --- */
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02), 0 10px 15px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 20px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* --- BUTTONS --- */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 123, 181, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #005f8d;
+    transform: translateY(-1px);
+}
+
+/* --- TABLES --- */
+.table {
+    margin-bottom: 0;
+    background-color: transparent; /* Let card bg show */
+}
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    color: #6c757d;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.table td {
+    vertical-align: middle;
+    padding: 15px;
+}
+
+/* --- ANIMATIONS --- */
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- FOOTER --- */
+.footer {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 20px 0;
+    background: rgba(255,255,255,0.5);
+}

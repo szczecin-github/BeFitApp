@@ -1,0 +1,32 @@
+@model IEnumerable<BeFitApp.Models.ExerciseType>
+@{ ViewData["Title"] = "Exercise Types"; }
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-dark fw-bold">Master Exercise List</h2>
+    @if (User.IsInRole("Admin")) {
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-lg"></i> Add New Type
+        </a>
+    }
+</div>
+
+<div class="card">
+    <div class="card-body p-0">
+        <table class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th class="ps-4">Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td class="ps-4 fw-bold text-primary">@item.Name</td>
+                        <td class="text-muted">@item.Description</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
