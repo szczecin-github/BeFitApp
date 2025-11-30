@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="Analysis" xml:space="preserve"><value>Analiza Postępów</value></data>
+  <data name="Progress (Last 4 Weeks)" xml:space="preserve"><value>Postępy (Ostatnie 4 Tygodnie)</value></data>
+  <data name="Exercise" xml:space="preserve"><value>Ćwiczenie</value></data>
+  <data name="Sessions" xml:space="preserve"><value>Sesje</value></data>
+  <data name="Total Reps" xml:space="preserve"><value>Suma Powtórzeń</value></data>
+  <data name="Max Weight" xml:space="preserve"><value>Maks. Ciężar</value></data>
+  <data name="Avg Weight" xml:space="preserve"><value>Śred. Ciężar</value></data>
+</root>
